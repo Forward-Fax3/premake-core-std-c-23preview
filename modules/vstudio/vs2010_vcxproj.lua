@@ -2053,7 +2053,7 @@
 			elseif (cfg.cppdialect == "C++20") then
 				m.element("LanguageStandard", condition, iif(_ACTION <= "vs2017", 'stdcpplatest', 'stdcpp20'))
 			elseif (cfg.cppdialect == "C++23") then
-				m.element("LanguageStandard", condition, 'stdcpplatest')
+				m.element("LanguageStandard", condition, iif(_ACTION <= "vs2019", 'stdcpplatest', 'stdcpp23'))
 			elseif (cfg.cppdialect == "C++latest") then
 				m.element("LanguageStandard", condition, 'stdcpplatest')
 			end
